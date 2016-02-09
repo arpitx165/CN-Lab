@@ -21,6 +21,7 @@ void Data::initialize()
 {
     // TODO - Generated method body
     id=par("host_id");
+    count=0;
 }
 
 void Data::handleMessage(cMessage *msg)
@@ -28,11 +29,13 @@ void Data::handleMessage(cMessage *msg)
     // TODO - Generated method body
     cPacket* pkt1= new cPacket();
     pkt1 = check_and_cast<cPacket*> (msg);
-
+     count++;
+    count=count%2; 
   if(pkt1 -> getArrivalGate() == gate("a_in"))
   {
          D_pdu* a = new D_pdu();
          a -> encapsulate(pkt1);
+         a ->setId(count);
          send(a,gate("d_out"));
   }
   else
@@ -51,6 +54,7 @@ void Data::handleMessage(cMessage *msg)
           }
       }
       else{
+      a ->setId(count);      
       D_pdu* ab=new D_pdu();
       ab->setType(2);
       send(ab,"d_out");
