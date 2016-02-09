@@ -24,6 +24,7 @@
 class Data : public cSimpleModule
 {
     int id;
+    int count;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
