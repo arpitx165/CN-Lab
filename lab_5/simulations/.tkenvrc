@@ -1,0 +1,6 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{}
+config default-runnumber	{}
+inspector Network.c3 Cm 3 2 411x277+883+58:normal
+inspector Network.c1 Cm 2 2 411x277+55+119:normal
+
