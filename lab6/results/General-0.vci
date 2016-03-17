@@ -1,0 +1,20 @@
+file 497 1458257678                                             
+version 2
+run General-0-20160318-05:02:14-11667
+attr configname General
+attr datetime 20160318-05:02:14
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Network
+attr processid 11667
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 4  Network.n5.n5  delay  ETV
+4	401 96 35 197 0 0 10 0 0 0 0
