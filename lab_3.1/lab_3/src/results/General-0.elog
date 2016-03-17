@@ -1,0 +1,519 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid General-0-20160218-23:36:58-5564 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t lab_2.Newtwork n Newtwork cm 1
+MS id 1 d bgb=374,106
+MC id 2 c cModule t lab_2.Compond pid 1 n c1 cm 1
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d p=49,43
+MC id 3 c cModule t lab_2.Hub pid 1 n c2 cm 1
+GC m 3 g 0 n ciaa o 0
+GC m 3 g 2 n cibb o 0
+GC m 3 g 5 n coaa o 1
+GC m 3 g 7 n cobb o 1
+MS id 3 d p=120,50
+MC id 4 c cModule t lab_2.Compond pid 1 n c3 cm 1
+GC m 4 g 0 n in o 0
+GC m 4 g 3 n out o 1
+MS id 4 d p=184,50
+CC sm 3 sg 5 dm 2 dg 0
+CC sm 2 sg 3 dm 3 dg 0
+CC sm 4 sg 3 dm 3 dg 2
+CC sm 3 sg 7 dm 4 dg 0
+MC id 5 c App t lab_2.App pid 2 n h1
+GC m 5 g 0 n in o 0
+GC m 5 g 3 n out o 1
+MS id 5 d ""
+MC id 6 c Data t lab_2.Data pid 2 n h2
+GC m 6 g 0 n a_in o 0
+GC m 6 g 2 n d_in o 0
+GC m 6 g 5 n a_out o 1
+GC m 6 g 7 n d_out o 1
+MS id 6 d p=50,161
+MC id 7 c Phy t lab_2.Phy pid 2 n h3
+GC m 7 g 0 n c_in o 0
+GC m 7 g 2 n d_in o 0
+GC m 7 g 5 n c_out o 1
+GC m 7 g 7 n d_out o 1
+MS id 7 d p=161,161
+CC sm 6 sg 5 dm 5 dg 0
+CS sm 6 sg 5 d ""
+CC sm 5 sg 3 dm 6 dg 0
+CS sm 5 sg 3 d ""
+CC sm 7 sg 7 dm 6 dg 2
+CS sm 7 sg 7 d ""
+CC sm 6 sg 7 dm 7 dg 2
+CS sm 6 sg 7 d ""
+CC sm 2 sg 0 dm 7 dg 0
+CS sm 2 sg 0 d ""
+CC sm 7 sg 5 dm 2 dg 3
+CS sm 7 sg 5 d ""
+MC id 8 c Ph1 t lab_2.Ph1 pid 3 n n1
+GC m 8 g 0 n ina o 0
+GC m 8 g 2 n inb o 0
+GC m 8 g 5 n outa o 1
+GC m 8 g 7 n outb o 1
+MS id 8 d ""
+MC id 9 c Ph_2 t lab_2.Ph_2 pid 3 n n2
+GC m 9 g 0 n inaa o 0
+GC m 9 g 2 n inbb o 0
+GC m 9 g 5 n outaa o 1
+GC m 9 g 7 n outbb o 1
+MS id 9 d ""
+CC sm 9 sg 5 dm 8 dg 2
+CC sm 8 sg 7 dm 9 dg 0
+CC sm 3 sg 0 dm 8 dg 0
+CC sm 8 sg 5 dm 3 dg 5
+CC sm 3 sg 2 dm 9 dg 2
+CC sm 9 sg 7 dm 3 dg 7
+MC id 10 c App t lab_2.App pid 4 n h1
+GC m 10 g 0 n in o 0
+GC m 10 g 3 n out o 1
+MS id 10 d ""
+MC id 11 c Data t lab_2.Data pid 4 n h2
+GC m 11 g 0 n a_in o 0
+GC m 11 g 2 n d_in o 0
+GC m 11 g 5 n a_out o 1
+GC m 11 g 7 n d_out o 1
+MS id 11 d p=50,161
+MC id 12 c Phy t lab_2.Phy pid 4 n h3
+GC m 12 g 0 n c_in o 0
+GC m 12 g 2 n d_in o 0
+GC m 12 g 5 n c_out o 1
+GC m 12 g 7 n d_out o 1
+MS id 12 d p=161,161
+CC sm 11 sg 5 dm 10 dg 0
+CS sm 11 sg 5 d ""
+CC sm 10 sg 3 dm 11 dg 0
+CS sm 10 sg 3 d ""
+CC sm 12 sg 7 dm 11 dg 2
+CS sm 12 sg 7 d ""
+CC sm 11 sg 7 dm 12 dg 2
+CS sm 11 sg 7 d ""
+CC sm 4 sg 0 dm 12 dg 0
+CS sm 4 sg 0 d ""
+CC sm 12 sg 5 dm 4 dg 3
+CS sm 12 sg 5 d ""
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c cMessage n "" pe -1
+BS id 0 tid 0 eid 0 etid 0 c cMessage n "" pe 0
+ES t 0
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c cMessage n delaysender pe -1
+CM id 2 tid 2 eid 2 etid 2 c cMessage n delayreciever pe -1
+CM id 3 tid 3 eid 3 etid 3 c cMessage n "" pe -1
+BS id 3 tid 3 eid 3 etid 3 c cMessage n "" pe 0
+ES t 1
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 8 m initialize(0)
+ME
+MB sm 1 tm 9 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+ME
+MB sm 1 tm 10 m initialize(0)
+ME
+MB sm 1 tm 11 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c cMessage n delaysender pe -1
+CM id 5 tid 5 eid 5 etid 5 c cMessage n delayreciever pe -1
+CM id 6 tid 6 eid 6 etid 6 c cMessage n "" pe -1
+ME
+MB sm 1 tm 12 m initialize(0)
+ME
+
+E # 1 t 0 m 5 ce 0 msg 0
+CM id 7 tid 7 eid 7 etid 7 c cMessage n "" pe -1
+BS id 7 tid 7 eid 7 etid 7 c A_pdu n "" pe 1
+CL id 7 tid 7 eid 7 etid 7 c A_pdu n "" pe 1 cid 8
+SH sm 5 sg 3 pd 0.1
+ES t 0.1
+MS id 5 d "t=recv: 0 send: 1"
+
+E # 2 t 0.1 m 6 ce 1 msg 7
+- Timer cancelled.
+CE id 3 tid 3 eid 3 etid 3 c cMessage n "" pe 0
+MS id 6 d "t=recv: 2 send: 0;p=50,161"
+CM id 9 tid 9 eid 9 etid 9 c cMessage n "" pe -1
+CM id 10 tid 10 eid 10 etid 10 c cMessage n "" pe -1
+CL id 10 tid 10 eid 7 etid 7 c D_pdu n "" pe 2 cid 11
+BS id 1 tid 1 eid 1 etid 1 c cMessage n delaysender pe 0
+ES t 1.1
+MS id 6 d "t=recv: 2 send: 1;p=50,161"
+
+E # 3 t 1.1 m 6 ce 2 msg 1
+CL id 11 tid 10 eid 7 etid 7 c D_pdu n "" pe 2 cid 12
+BS id 12 tid 10 eid 7 etid 7 c D_pdu n "" pe 3
+CL id 12 tid 10 eid 7 etid 7 c D_pdu n "" pe 3 cid 13
+SH sm 6 sg 7 pd 0.1
+ES t 1.2
+MS id 6 d "t=recv: 4 send: 2;p=50,161"
+BS id 3 tid 3 eid 3 etid 3 c cMessage n "" pe 2
+ES t 2.1
+
+E # 4 t 1.2 m 7 ce 3 msg 12
+CM id 14 tid 14 eid 14 etid 14 c cMessage n "" pe -1
+MS id 7 d "t=recv: 1 send: 0;p=161,161"
+MS id 7 d "t=recv: 1 send: 1;p=161,161"
+CM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe -1
+BS id 15 tid 15 eid 7 etid 7 c P n "" pe 4
+CL id 15 tid 15 eid 7 etid 7 c P n "" pe 4 cid 16
+SH sm 7 sg 5 pd 0.1
+SH sm 2 sg 3
+SH sm 3 sg 0
+ES t 1.3
+
+E # 5 t 1.3 m 8 ce 4 msg 15
+BS id 15 tid 15 eid 7 etid 7 c P n "" pe 5
+CL id 15 tid 15 eid 7 etid 7 c P n "" pe 5 cid 17
+SH sm 8 sg 7
+ES t 1.3
+
+E # 6 t 1.3 m 9 ce 5 msg 15
+BS id 15 tid 15 eid 7 etid 7 c P n "" pe 6
+CL id 15 tid 15 eid 7 etid 7 c P n "" pe 6 cid 18
+SH sm 9 sg 7
+SH sm 3 sg 7
+SH sm 4 sg 0 pd 0.1
+ES t 1.4
+
+E # 7 t 1.4 m 12 ce 6 msg 15
+CM id 19 tid 19 eid 19 etid 19 c cMessage n "" pe -1
+MS id 12 d "t=recv: 1 send: 0;p=161,161"
+MS id 12 d "t=recv: 1 send: 1;p=161,161"
+CM id 20 tid 20 eid 20 etid 20 c cMessage n "" pe -1
+CL id 12 tid 10 eid 7 etid 7 c D_pdu n "" pe 4 cid 21
+BS id 21 tid 10 eid 7 etid 7 c D_pdu n "" pe 7
+CL id 21 tid 10 eid 7 etid 7 c D_pdu n "" pe 7 cid 22
+SH sm 12 sg 7 pd 0.1
+ES t 1.5
+
+E # 8 t 1.5 m 11 ce 7 msg 21
+- Timer cancelled.
+MS id 11 d "t=recv: 2 send: 0;p=50,161"
+CM id 23 tid 23 eid 23 etid 23 c cMessage n "" pe -1
+CM id 24 tid 24 eid 24 etid 24 c cMessage n "" pe -1
+CM id 25 tid 25 eid 25 etid 25 c cMessage n "" pe -1
+CL id 25 tid 25 eid 25 etid 25 c D_pdu n "" pe 8 cid 26
+CL id 7 tid 7 eid 7 etid 7 c A_pdu n "" pe 2 cid 27
+BS id 27 tid 7 eid 27 etid 7 c A_pdu n "" pe 8
+CL id 27 tid 7 eid 27 etid 7 c A_pdu n "" pe 8 cid 28
+SH sm 11 sg 5 pd 0.1
+ES t 1.6
+BS id 5 tid 5 eid 5 etid 5 c cMessage n delayreciever pe 0
+ES t 2.5
+MS id 11 d "t=recv: 2 send: 1;p=50,161"
+
+E # 9 t 1.6 m 10 ce 8 msg 27
+MS id 10 d "t=recv: 1 send: 0"
+BU id 10 txt "message received"
+BS id 27 tid 7 eid 27 etid 7 c A_pdu n "" pe 9
+CL id 27 tid 7 eid 27 etid 7 c A_pdu n "" pe 9 cid 29
+SH sm 10 sg 3 pd 0.1
+ES t 1.7
+MS id 10 d "t=recv: 1 send: 1"
+
+E # 10 t 1.7 m 11 ce 9 msg 27
+- Timer cancelled.
+MS id 11 d "t=recv: 4 send: 1;p=50,161"
+CM id 30 tid 30 eid 30 etid 30 c cMessage n "" pe -1
+CM id 31 tid 31 eid 31 etid 31 c cMessage n "" pe -1
+CL id 31 tid 31 eid 27 etid 7 c D_pdu n "" pe 10 cid 32
+BS id 4 tid 4 eid 4 etid 4 c cMessage n delaysender pe 0
+ES t 2.7
+MS id 11 d "t=recv: 4 send: 2;p=50,161"
+
+E # 11 t 2.1 m 6 ce 3 msg 3
+- 1Timeout expired, resending message and restarting timer
+CL id 11 tid 10 eid 7 etid 7 c D_pdu n "" pe 3 cid 33
+BS id 33 tid 10 eid 7 etid 7 c D_pdu n "" pe 11
+CL id 33 tid 10 eid 7 etid 7 c D_pdu n "" pe 11 cid 34
+SH sm 6 sg 7 pd 0.1
+ES t 2.2
+BS id 3 tid 3 eid 3 etid 3 c cMessage n "" pe 11
+ES t 3.1
+
+E # 12 t 2.2 m 7 ce 11 msg 33
+CM id 35 tid 35 eid 35 etid 35 c cMessage n "" pe -1
+MS id 7 d "t=recv: 2 send: 1;p=161,161"
+MS id 7 d "t=recv: 2 send: 2;p=161,161"
+CM id 36 tid 36 eid 36 etid 36 c cMessage n "" pe -1
+BS id 36 tid 36 eid 7 etid 7 c P n "" pe 12
+CL id 36 tid 36 eid 7 etid 7 c P n "" pe 12 cid 37
+SH sm 7 sg 5 pd 0.1
+SH sm 2 sg 3
+SH sm 3 sg 0
+ES t 2.3
+
+E # 13 t 2.3 m 8 ce 12 msg 36
+BS id 36 tid 36 eid 7 etid 7 c P n "" pe 13
+CL id 36 tid 36 eid 7 etid 7 c P n "" pe 13 cid 38
+SH sm 8 sg 7
+ES t 2.3
+
+E # 14 t 2.3 m 9 ce 13 msg 36
+BS id 36 tid 36 eid 7 etid 7 c P n "" pe 14
+CL id 36 tid 36 eid 7 etid 7 c P n "" pe 14 cid 39
+SH sm 9 sg 7
+SH sm 3 sg 7
+SH sm 4 sg 0 pd 0.1
+ES t 2.4
+
+E # 15 t 2.4 m 12 ce 14 msg 36
+CM id 40 tid 40 eid 40 etid 40 c cMessage n "" pe -1
+MS id 12 d "t=recv: 2 send: 1;p=161,161"
+MS id 12 d "t=recv: 2 send: 2;p=161,161"
+CM id 41 tid 41 eid 41 etid 41 c cMessage n "" pe -1
+CL id 33 tid 10 eid 7 etid 7 c D_pdu n "" pe 12 cid 42
+BS id 42 tid 10 eid 7 etid 7 c D_pdu n "" pe 15
+CL id 42 tid 10 eid 7 etid 7 c D_pdu n "" pe 15 cid 43
+SH sm 12 sg 7 pd 0.1
+ES t 2.5
+
+E # 16 t 2.5 m 11 ce 8 msg 5
+CL id 26 tid 25 eid 26 etid 25 c D_pdu n "" pe 8 cid 44
+BS id 44 tid 25 eid 44 etid 25 c D_pdu n "" pe 16
+CL id 44 tid 25 eid 44 etid 25 c D_pdu n "" pe 16 cid 45
+SH sm 11 sg 7 pd 0.1
+ES t 2.6
+MS id 11 d "t=recv: 5 send: 3;p=50,161"
+BS id 6 tid 6 eid 6 etid 6 c cMessage n "" pe 0
+ES t 3.5
+
+E # 17 t 2.5 m 11 ce 15 msg 42
+- Timer cancelled.
+CE id 6 tid 6 eid 6 etid 6 c cMessage n "" pe 16
+MS id 11 d "t=recv: 7 send: 3;p=50,161"
+CM id 46 tid 46 eid 46 etid 46 c cMessage n "" pe -1
+CM id 47 tid 47 eid 47 etid 47 c cMessage n "" pe -1
+CM id 48 tid 48 eid 48 etid 48 c cMessage n "" pe -1
+CL id 48 tid 48 eid 48 etid 48 c D_pdu n "" pe 17 cid 49
+CL id 7 tid 7 eid 7 etid 7 c A_pdu n "" pe 8 cid 50
+BS id 50 tid 7 eid 50 etid 7 c A_pdu n "" pe 17
+CL id 50 tid 7 eid 50 etid 7 c A_pdu n "" pe 17 cid 51
+SH sm 11 sg 5 pd 0.1
+ES t 2.6
+BS id 5 tid 5 eid 5 etid 5 c cMessage n delayreciever pe 16
+ES t 3.5
+MS id 11 d "t=recv: 7 send: 4;p=50,161"
+
+E # 18 t 2.6 m 12 ce 16 msg 44
+CM id 52 tid 52 eid 52 etid 52 c cMessage n "" pe -1
+MS id 12 d "t=recv: 3 send: 2;p=161,161"
+MS id 12 d "t=recv: 3 send: 3;p=161,161"
+CM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe -1
+BS id 53 tid 53 eid 44 etid 25 c P n "" pe 18
+CL id 53 tid 53 eid 44 etid 25 c P n "" pe 18 cid 54
+SH sm 12 sg 5 pd 0.1
+SH sm 4 sg 3
+SH sm 3 sg 2
+ES t 2.7
+
+E # 19 t 2.6 m 10 ce 17 msg 50
+MS id 10 d "t=recv: 2 send: 1"
+BU id 10 txt "message received"
+BS id 50 tid 7 eid 50 etid 7 c A_pdu n "" pe 19
+CL id 50 tid 7 eid 50 etid 7 c A_pdu n "" pe 19 cid 55
+SH sm 10 sg 3 pd 0.1
+ES t 2.7
+MS id 10 d "t=recv: 2 send: 2"
+
+E # 20 t 2.7 m 11 ce 10 msg 4
+CL id 32 tid 31 eid 27 etid 7 c D_pdu n "" pe 10 cid 56
+BS id 56 tid 31 eid 27 etid 7 c D_pdu n "" pe 20
+CL id 56 tid 31 eid 27 etid 7 c D_pdu n "" pe 20 cid 57
+SH sm 11 sg 7 pd 0.1
+ES t 2.8
+MS id 11 d "t=recv: 9 send: 5;p=50,161"
+BS id 6 tid 6 eid 6 etid 6 c cMessage n "" pe 17
+ES t 3.7
+
+E # 21 t 2.7 m 9 ce 18 msg 53
+BS id 53 tid 53 eid 44 etid 25 c P n "" pe 21
+CL id 53 tid 53 eid 44 etid 25 c P n "" pe 21 cid 58
+SH sm 9 sg 5
+ES t 2.7
+
+E # 22 t 2.7 m 11 ce 19 msg 50
+- Timer cancelled.
+CE id 6 tid 6 eid 6 etid 6 c cMessage n "" pe 20
+MS id 11 d "t=recv: 11 send: 5;p=50,161"
+CM id 59 tid 59 eid 59 etid 59 c cMessage n "" pe -1
+CM id 60 tid 60 eid 60 etid 60 c cMessage n "" pe -1
+CL id 60 tid 60 eid 50 etid 7 c D_pdu n "" pe 22 cid 61
+BS id 4 tid 4 eid 4 etid 4 c cMessage n delaysender pe 20
+ES t 3.7
+MS id 11 d "t=recv: 11 send: 6;p=50,161"
+
+E # 23 t 2.7 m 8 ce 21 msg 53
+BS id 53 tid 53 eid 44 etid 25 c P n "" pe 23
+CL id 53 tid 53 eid 44 etid 25 c P n "" pe 23 cid 62
+SH sm 8 sg 5
+SH sm 3 sg 5
+SH sm 2 sg 0 pd 0.1
+ES t 2.8
+
+E # 24 t 2.8 m 12 ce 20 msg 56
+CM id 63 tid 63 eid 63 etid 63 c cMessage n "" pe -1
+MS id 12 d "t=recv: 4 send: 3;p=161,161"
+MS id 12 d "t=recv: 4 send: 4;p=161,161"
+CM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe -1
+BS id 64 tid 64 eid 27 etid 7 c P n "" pe 24
+CL id 64 tid 64 eid 27 etid 7 c P n "" pe 24 cid 65
+SH sm 12 sg 5 pd 0.1
+SH sm 4 sg 3
+SH sm 3 sg 2
+ES t 2.9
+
+E # 25 t 2.8 m 7 ce 23 msg 53
+CM id 66 tid 66 eid 66 etid 66 c cMessage n "" pe -1
+MS id 7 d "t=recv: 3 send: 2;p=161,161"
+MS id 7 d "t=recv: 3 send: 3;p=161,161"
+CM id 67 tid 67 eid 67 etid 67 c cMessage n "" pe -1
+CL id 44 tid 25 eid 44 etid 25 c D_pdu n "" pe 18 cid 68
+BS id 68 tid 25 eid 68 etid 25 c D_pdu n "" pe 25
+CL id 68 tid 25 eid 68 etid 25 c D_pdu n "" pe 25 cid 69
+SH sm 7 sg 7 pd 0.1
+ES t 2.9
+
+E # 26 t 2.9 m 9 ce 24 msg 64
+BS id 64 tid 64 eid 27 etid 7 c P n "" pe 26
+CL id 64 tid 64 eid 27 etid 7 c P n "" pe 26 cid 70
+SH sm 9 sg 5
+ES t 2.9
+
+E # 27 t 2.9 m 6 ce 25 msg 68
+- Timer cancelled.
+CE id 3 tid 3 eid 3 etid 3 c cMessage n "" pe 11
+MS id 6 d "t=recv: 7 send: 2;p=50,161"
+CM id 71 tid 71 eid 71 etid 71 c cMessage n "" pe -1
+CM id 72 tid 72 eid 72 etid 72 c cMessage n "" pe -1
+DM id 68 tid 25 eid 68 etid 25 c cMessage n "" pe 27
+MS id 6 d "t=recv: 7 send: 2;p=50,161"
+
+E # 28 t 2.9 m 8 ce 26 msg 64
+BS id 64 tid 64 eid 27 etid 7 c P n "" pe 28
+CL id 64 tid 64 eid 27 etid 7 c P n "" pe 28 cid 73
+SH sm 8 sg 5
+SH sm 3 sg 5
+SH sm 2 sg 0 pd 0.1
+ES t 3
+
+E # 29 t 3 m 7 ce 28 msg 64
+CM id 74 tid 74 eid 74 etid 74 c cMessage n "" pe -1
+MS id 7 d "t=recv: 4 send: 3;p=161,161"
+MS id 7 d "t=recv: 4 send: 4;p=161,161"
+CM id 75 tid 75 eid 75 etid 75 c cMessage n "" pe -1
+CL id 56 tid 31 eid 27 etid 7 c D_pdu n "" pe 24 cid 76
+BS id 76 tid 31 eid 27 etid 7 c D_pdu n "" pe 29
+CL id 76 tid 31 eid 27 etid 7 c D_pdu n "" pe 29 cid 77
+SH sm 7 sg 7 pd 0.1
+ES t 3.1
+
+E # 30 t 3.1 m 6 ce 29 msg 76
+- Timer cancelled.
+MS id 6 d "t=recv: 9 send: 2;p=50,161"
+CM id 78 tid 78 eid 78 etid 78 c cMessage n "" pe -1
+CM id 79 tid 79 eid 79 etid 79 c cMessage n "" pe -1
+CM id 80 tid 80 eid 80 etid 80 c cMessage n "" pe -1
+CL id 80 tid 80 eid 80 etid 80 c D_pdu n "" pe 30 cid 81
+CL id 27 tid 7 eid 27 etid 7 c A_pdu n "" pe 10 cid 82
+BS id 82 tid 7 eid 82 etid 7 c A_pdu n "" pe 30
+CL id 82 tid 7 eid 82 etid 7 c A_pdu n "" pe 30 cid 83
+SH sm 6 sg 5 pd 0.1
+ES t 3.2
+BS id 2 tid 2 eid 2 etid 2 c cMessage n delayreciever pe 0
+ES t 4.1
+MS id 6 d "t=recv: 9 send: 3;p=50,161"
+
+E # 31 t 3.2 m 5 ce 30 msg 82
+MS id 5 d "t=recv: 1 send: 1"
+BU id 5 txt "ack received"
+BS id 82 tid 7 eid 82 etid 7 c A_pdu n "" pe 31
+CL id 82 tid 7 eid 82 etid 7 c A_pdu n "" pe 31 cid 84
+SH sm 5 sg 3 pd 0.1
+ES t 3.3
+MS id 5 d "t=recv: 1 send: 2"
+- RTT 3.2
+
+E # 32 t 3.3 m 6 ce 31 msg 82
+- Timer cancelled.
+MS id 6 d "t=recv: 11 send: 3;p=50,161"
+CM id 85 tid 85 eid 85 etid 85 c cMessage n "" pe -1
+CM id 86 tid 86 eid 86 etid 86 c cMessage n "" pe -1
+CL id 86 tid 86 eid 82 etid 7 c D_pdu n "" pe 32 cid 87
+BS id 1 tid 1 eid 1 etid 1 c cMessage n delaysender pe 3
+ES t 4.3
+MS id 6 d "t=recv: 11 send: 4;p=50,161"
+
+E # 33 t 3.5 m 11 ce 17 msg 5
+CL id 49 tid 48 eid 49 etid 48 c D_pdu n "" pe 17 cid 88
+BS id 88 tid 48 eid 88 etid 48 c D_pdu n "" pe 33
+CL id 88 tid 48 eid 88 etid 48 c D_pdu n "" pe 33 cid 89
+SH sm 11 sg 7 pd 0.1
+ES t 3.6
+MS id 11 d "t=recv: 12 send: 7;p=50,161"
+BS id 6 tid 6 eid 6 etid 6 c cMessage n "" pe 22
+ES t 4.5
+
+E # 34 t 3.6 m 12 ce 33 msg 88
+CM id 90 tid 90 eid 90 etid 90 c cMessage n "" pe -1
+MS id 12 d "t=recv: 5 send: 4;p=161,161"
+MS id 12 d "t=recv: 5 send: 5;p=161,161"
+CM id 91 tid 91 eid 91 etid 91 c cMessage n "" pe -1
+BS id 91 tid 91 eid 88 etid 48 c P n "" pe 34
+CL id 91 tid 91 eid 88 etid 48 c P n "" pe 34 cid 92
+SH sm 12 sg 5 pd 0.1
+SH sm 4 sg 3
+SH sm 3 sg 2
+ES t 3.7
+
+E # 35 t 3.7 m 11 ce 22 msg 4
+CL id 61 tid 60 eid 50 etid 7 c D_pdu n "" pe 22 cid 93
+BS id 93 tid 60 eid 50 etid 7 c D_pdu n "" pe 35
+CL id 93 tid 60 eid 50 etid 7 c D_pdu n "" pe 35 cid 94
+SH sm 11 sg 7 pd 0.1
+ES t 3.8
+MS id 11 d "t=recv: 14 send: 8;p=50,161"
+SE e 1 c 9 m "scheduleAt(): message (cMessage) is currently scheduled, use cancelEvent() before rescheduling"
+DM id 7 tid 7 eid 7 etid 7 c cMessage n "" pe 1
+DM id 12 tid 10 eid 12 etid 10 c cMessage n "" pe 3
+DM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe 4
+DM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe 5
+DM id 12 tid 10 eid 12 etid 10 c cMessage n "" pe 7
+DM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe 6
+DM id 21 tid 10 eid 21 etid 10 c cMessage n "" pe 7
+DM id 27 tid 7 eid 27 etid 7 c cMessage n "" pe 8
+DM id 27 tid 7 eid 27 etid 7 c cMessage n "" pe 9
+DM id 33 tid 10 eid 33 etid 10 c cMessage n "" pe 11
+DM id 36 tid 36 eid 36 etid 36 c cMessage n "" pe 12
+DM id 36 tid 36 eid 36 etid 36 c cMessage n "" pe 13
+DM id 33 tid 10 eid 33 etid 10 c cMessage n "" pe 15
+DM id 36 tid 36 eid 36 etid 36 c cMessage n "" pe 14
+DM id 42 tid 10 eid 42 etid 10 c cMessage n "" pe 15
+DM id 44 tid 25 eid 44 etid 25 c cMessage n "" pe 16
+DM id 50 tid 7 eid 50 etid 7 c cMessage n "" pe 17
+DM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe 18
+DM id 50 tid 7 eid 50 etid 7 c cMessage n "" pe 19
+DM id 56 tid 31 eid 56 etid 31 c cMessage n "" pe 20
+DM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe 21
+DM id 44 tid 25 eid 44 etid 25 c cMessage n "" pe 25
+DM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe 23
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe 24
+DM id 68 tid 25 eid 68 etid 25 c cMessage n "" pe 25
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe 26
+DM id 56 tid 31 eid 56 etid 31 c cMessage n "" pe 29
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe 28
+DM id 76 tid 31 eid 76 etid 31 c cMessage n "" pe 29
+DM id 82 tid 7 eid 82 etid 7 c cMessage n "" pe 30
+DM id 82 tid 7 eid 82 etid 7 c cMessage n "" pe 31
+DM id 88 tid 48 eid 88 etid 48 c cMessage n "" pe 33
+DM id 91 tid 91 eid 91 etid 91 c cMessage n "" pe 34
+DM id 93 tid 60 eid 93 etid 60 c cMessage n "" pe 35

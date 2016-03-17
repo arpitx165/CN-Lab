@@ -1,0 +1,23 @@
+version 2
+run General-0-20160218-23:36:58-5564
+attr configname General
+attr datetime 20160218-23:36:58
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Newtwork
+attr processid 5564
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  Newtwork.c1.h1  HopCount  ETV
+vector 1  Newtwork.c3.h1  HopCount  ETV
+0	1	0	1
+0	31	3.2	3
+1	9	1.6	2
+1	19	2.6	2
