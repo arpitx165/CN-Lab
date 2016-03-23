@@ -1,0 +1,87 @@
+version 2
+run General-0-20160321-02:36:54-10031
+attr configname General
+attr datetime 20160321-02:36:54
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Network
+attr processid 10031
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Network.n1.n1 	#sent 	1
+scalar Network.n1.n1 	#received 	6
+statistic Network.n1.n1 	delay
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr type  int
+bin	-INF	0
+bin	0	0
+bin	1	0
+scalar Network.n2.n2 	#sent 	0
+scalar Network.n2.n2 	#received 	6
+statistic Network.n2.n2 	delay
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr type  int
+bin	-INF	0
+bin	0	0
+bin	1	0
+scalar Network.n3.n3 	#sent 	0
+scalar Network.n3.n3 	#received 	6
+statistic Network.n3.n3 	delay
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr type  int
+bin	-INF	0
+bin	0	0
+bin	1	0
+scalar Network.n4.n4 	#sent 	0
+scalar Network.n4.n4 	#received 	3
+statistic Network.n4.n4 	delay
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr type  int
+bin	-INF	0
+bin	0	0
+bin	1	0
+scalar Network.n5.n5 	#sent 	0
+scalar Network.n5.n5 	#received 	2
+statistic Network.n5.n5 	delay
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr type  int
+bin	-INF	0
+bin	0	0
+bin	1	0
