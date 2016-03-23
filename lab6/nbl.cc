@@ -57,7 +57,10 @@ void Nbl::handleMessage(cMessage *msg)
         pkt1->setSrc(src);
         pkt1->setDest(dest);
         countsen++;
-        pkt1->setDel(simTime());
+        if(uniform(0,1)<0.30)
+         pkt1->setDel(simTime()+2);
+        else
+         pkt1->setDel(simTime()+1);
         send(pkt1,gtab[dest-1].second);
       }
       else
@@ -67,6 +70,10 @@ void Nbl::handleMessage(cMessage *msg)
           if(pkt1 ->getDest()== id)
           {
               EV << simTime()-pkt1->getDel() << endl;
+              if(uniform(0,1)<0.40)
+                 pkt1->setDel(simTime()+2);
+                else
+                 pkt1->setDel(simTime()+1);
              delay1.record(simTime()-pkt1->getDel());
              countsen++;
              delay.collect(simTime()-pkt1->getDel());

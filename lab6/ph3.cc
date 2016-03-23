@@ -33,22 +33,29 @@ void Ph3::handleMessage(cMessage *msg)
           pkt1->encapsulate(pkt);
           send(pkt1,gate("downout"));
        }
-       else if(msg ->getArrivalGate()==gate("downin"))
-       {
-           Ppdu *pkt1=new Ppdu();
-           pkt1=check_and_cast<Ppdu *>(pkt);
-      /*  if(pkt1->getType()==1)
-        {
-           if (uniform(0,1) < 0.1)
-           {
-                 EV << "\"Losing\" message.\n";
-                 bubble("message lost");  // making animation more informative...
-                 delete pkt1;
-           }
-         else
-           send(pkt1->decapsulate(),gate("upout"));
-        }
-        else*/
-            send(pkt1->decapsulate(),gate("upout"));
-       }
+    else if(msg ->getArrivalGate()==gate("downin"))
+    {
+        Ppdu *pkt1=new Ppdu();
+        Dpdu *pkt2=new Dpdu();
+        Ppdu *pkt4;
+        cPacket* pkt3;
+        pkt1=check_and_cast<Ppdu *>(pkt);
+        pkt4=pkt1->dup();
+        pkt3=pkt4->decapsulate();
+        pkt2=check_and_cast<Dpdu *>(pkt3);
+
+      if(pkt2->getType()==0)
+      {
+          if (uniform(0,1) < 0.1)
+          {
+                EV << "\"Losing\" message.\n";
+                bubble("message lost");  // making animation more informative...
+                delete pkt4;delete pkt1;
+          }
+        else
+         {delete pkt4;send(pkt1->decapsulate(),gate("upout"));}
+      }
+      else
+          {delete pkt4;send(pkt1->decapsulate(),gate("upout"));}
+    }
 }
